@@ -21,7 +21,7 @@
     "demo_xml" : [],
     "update_xml" : [
                     "views/hr_payroll_report.xml",
-                    "security/hr_security.xml",
+                    #"security/hr_security.xml",
                     "security/ir.model.access.csv",
                     'report/templates/layout_view.xml',
                     "wizards/hr_payroll_inverse_view.xml",
