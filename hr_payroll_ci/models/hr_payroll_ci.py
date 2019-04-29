@@ -25,7 +25,7 @@ from odoo.tools.safe_eval import safe_eval as eval
 from decimal import Decimal
 from collections import namedtuple
 from math import fabs, ceil
-from odoo.tools import format_amount
+#from odoo.tools import format_amount
 
 import babel
 
@@ -689,7 +689,8 @@ class hr_payslip(models.Model):
             for line in self.line_ids :
                 if line.salary_rule_id.code == code and self.date_to >= self.date_to and  payslip.date_to[2:4]==annee :
                     cpt += line.total
-            result = format_amount.manageSeparator(cpt)
+            #result = format_amount.manageSeparator(cpt)
+            result = cpt
             return result
 
     def get_amount_rubrique(self, rubrique):
@@ -699,7 +700,8 @@ class hr_payslip(models.Model):
         for line in line_ids :
             if line.code == rubrique :
                 total = line.total
-        result = format_amount.manageSeparator(total)
+        #result = format_amount.manageSeparator(total)
+        result = total
         return result
 
     @api.one
